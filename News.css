@@ -1,0 +1,194 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: "logo header" "menu menu-bar" "menu main" "menu footer";
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.logo {
+    grid-area: logo;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    max-width: 120px;
+}
+
+header {
+    grid-area: header;
+    background-color: #00509E;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+#navigation-menu {
+    grid-area: menu;
+    background-color: #00509E;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+#navigation-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#navigation-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 0.75rem;
+    display: block;
+    background-color: #003F7D;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.menu-bar {
+    grid-area: menu-bar;
+    background-color: #003F7D;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu-bar a {
+    text-decoration: none;
+    color: white;
+    padding: 0.75rem 1rem;
+    background-color: #00509E;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.donate-btn {
+    background-color: #FF4500;
+}
+
+main {
+    grid-area: main;
+    padding: 1rem;
+}
+
+#welcome-section {
+    text-align: center;
+    background-color: #00509E;
+    /* Gold */
+    color: white;
+    /* Navy blue */
+    padding: 40px 20px;
+    border-bottom: 4px solid #002366;
+    /* Navy blue border */
+}
+
+#welcome-section h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#welcome-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#welcome-section .cta-button {
+    background-color: #002366;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+#welcome-section .cta-button:hover {
+    background-color: #FFFFFF;
+    color: #002366;
+    border: 2px solid #002366;
+}
+
+.content-section .cta-button {
+    background-color: #002366;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.content-section .cta-button:hover {
+    background-color: #FFFFFF;
+    color: #002366;
+    border: 2px solid #002366;
+}
+
+.content-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.content-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.content-section article {
+    margin-bottom: 20px;
+}
+
+.content-section h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.content-section p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.content-section a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.content-section a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #003F7D;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+#footer a {
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,275 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: "logo header" "menu menu-bar" "menu main" "menu footer";
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.logo {
+    grid-area: logo;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    max-width: 120px;
+}
+
+header {
+    grid-area: header;
+    background-color: #00509E;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+#navigation-menu {
+    grid-area: menu;
+    background-color: #00509E;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+#navigation-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#navigation-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 0.75rem;
+    display: block;
+    background-color: #003F7D;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.menu-bar {
+    grid-area: menu-bar;
+    background-color: #003F7D;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu-bar a {
+    text-decoration: none;
+    color: white;
+    padding: 0.75rem 1rem;
+    background-color: #00509E;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.donate-btn {
+    background-color: #FF4500;
+}
+
+main {
+    grid-area: main;
+    padding: 1rem;
+}
+
+#welcome-section {
+    text-align: center;
+    background-color: #00509E;
+    /* Gold */
+    color: white;
+    /* Navy blue */
+    padding: 40px 20px;
+    border-bottom: 4px solid #002366;
+    /* Navy blue border */
+}
+
+#welcome-section h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#welcome-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#welcome-section .cta-button {
+    background-color: #002366;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+#welcome-section .cta-button:hover {
+    background-color: #FFFFFF;
+    color: #002366;
+    border: 2px solid #002366;
+}
+
+.content-section .cta-button {
+    background-color: #002366;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.content-section .cta-button:hover {
+    background-color: #FFFFFF;
+    color: #002366;
+    border: 2px solid #002366;
+}
+
+
+/* General Styles */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* Contact Form Styles */
+
+#contact {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin: 5px 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background-color: #00509E;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #00509E;
+}
+
+
+/* Social Media Links Styles */
+
+#social-media {
+    text-align: center;
+    margin: 20px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.instagram {
+    background-color: #e4405f;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+
+/* FAQ Styles */
+
+#faqs {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.faq {
+    margin-bottom: 15px;
+}
+
+.faq h3 {
+    margin: 0;
+    cursor: pointer;
+}
+
+.faq p {
+    display: none;
+    margin: 5px 0;
+}
+
+.faq.active p {
+    display: block;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #003F7D;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+#footer a {
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
