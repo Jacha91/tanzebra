@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Tanzebra Football Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General body styling */
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        /* Form container styling */
+        
+        .register-container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* Logo styling */
+        
+        .register-container img {
+            width: 150px;
+            height: 160px;
+            margin-bottom: 1.5rem;
+            padding-top: 1.5rem;
+        }
+        /* Header styling */
+        
+        .register-container h2 {
+            margin-bottom: 1.5rem;
+            color: #333;
+            font-size: 1.5rem;
+        }
+        /* Input field styling */
+        
+        .register-container input {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        /* Button styling */
+        
+        .register-container button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .register-container button:hover {
+            background-color: #0056b3;
+        }
+        /* Link styling */
+        
+        .register-container p {
+            margin-top: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .register-container a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .register-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register-container">
+        <img src="logo 2.png" alt="Tanzebra Football Club Logo">
+        <h2>Register for Tanzebra FC</h2>
+
+        <form id="register-form" method="post" action="">
+            <input type="text" id="full-name" name="full-name" placeholder="Full Name" required>
+            <input type="text" id="contact" name="contact" placeholder="Email or Phone Number" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <p>Already have an account? <a href="login.html">Login Here</a></p>
+    </div>
+
+    <script src="register.js">
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const fullName = document.getElementById('full-name').value;
+            const contact = document.getElementById('contact').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            // Validation for email or phone
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^\d{10}$/; // Accepts 10-digit phone numbers
+
+            if (!fullName || !contact || !password || !confirmPassword) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            if (!emailRegex.test(contact) && !phoneRegex.test(contact)) {
+                alert('Please enter a valid email or 10-digit phone number.');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+
+            console.log('Registering with:', fullName, contact, password);
+            alert('Registration successful! Redirecting to login...');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+
+</html>
